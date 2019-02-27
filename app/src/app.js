@@ -1,29 +1,40 @@
-import React from './blocks'
-import ReactDOM from './blocks'
-import Component from './blocks'
+import React from './Luy'
+import ReactDOM from './Luy'
+import Component from './Luy'
 
 let a = [1, 2, 3, 4, 5]
 
-class App extends React.Component {
-    constructor(props) {
-        super()
+class C extends React.Component {
+    render() {
+        return (<div>asd</div>)
 
-        // setInterval(() => {
-        //   this.setState()
-        // }, 1000);
     }
+}
+
+export default class App extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            counter: 2
+        }
+        // setInterval(() => {
+        //   this.setState({ counter: this.state.counter + 1 })
+        // }, 1500)
+        //
+    }
+
     render() {
         return (
-            <div>
-                <div style={{ background: 'rgba(120,120,120,0.3)', color: 'white' }}>
-                    it works! ha ha!
-                </div>
+            <div key={1} style={{background: `rgb(200,220,${this.state.counter + 1})`}}>
+                <h1>hello world</h1>
+                {[<p>1</p>,<p>2</p>,<p>3</p>]}
             </div>
         )
     }
 }
 
 ReactDOM.render(
-    <App />,
+    <App/>,
     document.getElementById('root')
 );
