@@ -1,5 +1,5 @@
-until 2017/10/5
-### todolist
+until 2017/10/5[From Luy]
+### to study
  - [x] 第一次渲染
  - [x] 虚拟DOM
  - [x] 优化的diff算法
